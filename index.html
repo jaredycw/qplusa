@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <link href="./styles/globals.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+</head>
+  <body>
+    <div class="parallax-bg" style="left:0;top:0;height: 100%;">
+        <ul class="scene" id="scene1">
+
+            <li class="layer" data-depth="0.20"><i class="qplusa-square abs area1"></i></li>
+            <li class="layer" data-depth="0.30"><i class="qplusa-circle abs area2"></i></li>
+            <li class="layer" data-depth="0.40"><i class="qplusa-triangle abs area3">&#9650;</i></li>
+            <li class="layer" data-depth="0.50"><i class="qplusa-square abs area4"></i></li>
+            <li class="layer" data-depth="0.20"><i class="qplusa-circle abs area5"></i></li>
+            <li class="layer" data-depth="0.30"><i class="qplusa-triangle abs area6">&#9650;</i></li>
+            <li class="layer" data-depth="0.40"><i class="qplusa-circle abs area7"></i></li>
+            <li class="layer" data-depth="0.50"><i class="qplusa-square abs area8"></i></li>
+            <li class="layer" data-depth="0.30"><i class="qplusa-triangle abs area9">&#9650;</i></li>
+            <li class="layer" data-depth="0.20"><i class="qplusa-triangle abs area10">&#9650;</i></li>
+            <li class="layer" data-depth="0.40"><i class="qplusa-circle abs area11"></i></li>
+            <li class="layer" data-depth="0.20"><i class="qplusa-square abs area12"></i></li>
+ 
+        </ul>
+        
+    </div>
+    <div class="main-content mt-5">
+        <div class="container">
+           
+            <div class="d-flex justify-content-center align-items-center hero-section">
+                <div class="text-center">
+                    <h1>Q Plus A Art Foundation Hi-Res Logo</h1>
+                    <p>Empowering Creativity, Inspiring a Generation</p>
+                    <div class="row mb-2">
+                        <div class="col-xl-5">
+                            <button type="button" class="mb-3 hero-btn watch-btn">Watch</button>
+                        </div>
+                        <div class="col-xl-4">
+                            <button type="button" class="mb-3 hero-btn donate-btn">Donate</button>
+                        </div>
+                    </div>
+                    <div>
+                        <iframe width="900" height="600" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
+                    </div>
+                    
+                </div>        
+            </div>
+
+
+
+            <footer class="my-4">
+                <div class="row">
+
+                    <div class="col-xl">
+                        <h1>Q+A Art Foundation</h1>
+                    </div>
+
+                    <div class="col-xl-5">
+
+                        <div class="row text-xl-end footer-navigation">
+
+                            <div class="col-3">
+                                <a href="/">Contact</a>
+                            </div>
+
+                            <div class="col-3">
+                                <a href="/">Term</a>
+                            </div>
+
+                            <div class="col-3">
+                                <a href="/">Blog</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-auto">
+                        <div class="row footer-navigation">
+
+                            <div class="col-3">
+                                <a href="/">IG</a>
+                            </div>
+
+                            <div class="col-3">
+                                <a href="/">FB</a>
+                            </div>
+
+                            <div class="col-3">
+                                <a href="/">Ln</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="footer-infor"> 
+                    <p>
+                        Room 1218, 19 Wang Hoi Road, Kowloon Bay
+                        <br>
+                        <a href="mailto:info@qplusa.org">info@qplusa.org</a>
+                    </p>
+                    <p class="footer-cpright">
+                        &copy;2024 by Q+A Art Foundation
+                    </p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        var scene1 = document.getElementById('scene1');
+        var parallaxInstance = new Parallax(scene1, {
+        relativeInput: true
+        });
+        
+    </script>
+        
+  </body>
+</html>

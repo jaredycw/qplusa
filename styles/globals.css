@@ -1,0 +1,164 @@
+:root{
+    --font-color:#1D1D1F;
+    --pargraph:1rem;
+    --extra-small-size: 0.8rem;
+}
+.parallax-bg{
+    position: absolute;
+    width: 100%;
+}
+.main-content{
+    z-index: 1;
+    position: relative;
+    overflow-x: hidden;
+}
+.abs{
+    position: absolute;
+}
+.qplusa-square{
+    width: 28px;
+    height: 28px;
+    display: block;
+    border: 3px solid #DB7658;
+}
+.qplusa-circle{
+    width: 28px;
+    height: 28px;
+    display: block;
+    border: 3px solid #91B1DA;
+    border-radius: 50%;
+}
+.qplusa-triangle{
+    color: transparent;
+    font-size: 40px;
+    -webkit-text-stroke: 3px #F2DE6D;
+}
+.area1{
+    left:20%;
+    top:5%;
+}
+.area2 {
+    left: 45%;
+    top: 20%;
+}
+.area3{
+    left:5%;
+    top:15%
+}
+.area4{
+    left:93%;
+    top:35%;
+}
+.area5{
+    left:80%;
+    top:8%;
+}
+/** triangle **/
+.area6{
+    left:65%;
+    top:15%;
+}
+.area7{
+    left:10%;
+    top:40%;
+}
+.area8{
+    left:5%;
+    top:60%;
+}
+.area9{
+    left:13%;
+    top:80%;
+}
+.area10{
+    left:82%;
+    top:45%;
+}
+.area11{
+    left:85%;
+    top:65%;
+}
+.area12{
+    left:90%;
+    top:85%;
+}
+.scene{
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.layer {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    font-size: var(--pargraph);
+}
+.hero-section .row{
+    justify-content: center;
+}
+.hero-section .hero-btn{
+    border:0;
+    border-radius: 58px;
+    min-width: 280px;
+    padding:0.8rem 0;
+}
+.hero-section .watch-btn{
+    background-color: #F2DE6D;
+    transition: all 0.3s ease-in-out;
+}
+.hero-section .watch-btn:hover{
+    background-color: #FFE551;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.hero-section .donate-btn{
+    background-color: #DB7658;
+    transition: all 0.3s ease-in-out;
+}
+.hero-section .donate-btn:hover{
+    background-color: #F5734D;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.hero-section iframe{
+    border-radius: 26px;
+}
+
+
+
+
+footer{
+    color:var(--font-color);
+    font-size: 1.2rem;
+}
+footer .row{
+    align-items: center;
+}
+footer h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.footer-infor a{
+    color: var(--font-color);
+    text-decoration: none;
+    opacity:1;
+    transition: opacity 0.3s ease-in-out;
+}
+.footer-infor a:hover{
+    opacity: 0.5;
+}
+.footer-navigation a{
+    color: #D7BBA7;
+    font-weight: 700;
+    font-size:1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+.footer-navigation a:hover{
+    color: #91B1DA;
+}
+.footer-cpright {
+    font-size: var(--extra-small-size);
+}
