@@ -286,8 +286,9 @@
     const navA = gsap.timeline({
         scrollTrigger: {
             trigger: ".nav-ir-1",
-            start: "top 80%",
-            end: "bottom 20%",
+            start: "top 90%",
+            duration:1,
+            //end: "bottom 20%",
             scrub: true
         }
     });
@@ -297,8 +298,9 @@
     const navB = gsap.timeline({
         scrollTrigger: {
             trigger: ".nav-ir-1",
-            start: "top 90%",
-            end: "bottom 10%",
+            start: "top 30%",
+            duration:1,
+            //end: "bottom 10%",
             scrub: true,
         }
     });
@@ -309,7 +311,7 @@
         scrollTrigger: {
             trigger: ".nav-ir-2",
             start: "top 80%",
-            end: "bottom 10%",
+            //end: "bottom 10%",
             scrub: true,
         }
     });
@@ -319,13 +321,47 @@
     const navD = gsap.timeline({
         scrollTrigger: {
             trigger: ".nav-ir-2",
-            start: "top 90%",
-            end: "bottom 10%",
+            start: "top 30%",
+            duration:1,
+            //end: "bottom 10%",
             scrub: true,
         }
     });
     navC.from(".nav-ir-4", {y:100});
     navC.to(".nav-ir-4", {y:0});
+
+    const lineA = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".nav-ir-1",
+            start: "top 30%",
+            duration:1,
+            scrub: true,
+        }
+    });
+    lineA.from(".line-1", {opacity:0});
+    lineA.to(".line-1", {opacity:1});
+
+    const lineB = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".nav-ir-2",
+            start: "top 30%",
+            duration:1,
+            scrub: true,
+        }
+    });
+    lineB.from(".line-2", {opacity:0});
+    lineB.to(".line-2", {opacity:1});
+
+    const lineC = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".nav-ir-3",
+            start: "top 30%",
+            duration:1,
+            scrub: true,
+        }
+    });
+    lineC.from(".line-3", {opacity:0});
+    lineC.to(".line-3", {opacity:1});
 
 
 
