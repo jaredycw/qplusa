@@ -176,17 +176,16 @@ body{
     transform: translate(2ch, 2mm);
 }
 .line-1{
-    width: 50%;
-    top: 10%;
-    right: 15%;
+    top: 13%;
+    left:4%;
  }
  .line-2{
     top: 43%;
     left: 20%;
  }
  .line-3{
-    top: 62%;
-    left: 37%;
+    top: 61%;
+    left: 20%;
  }
 .nav-ir-2{
     background-color: #DB7658;
