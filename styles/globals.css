@@ -99,7 +99,12 @@
     font-size: var(--paragraph-font);
 }
 .hero-section{
-    margin-top:9rem;
+    margin-top:6rem;
+}
+.hero-section-scaled{
+    opacity: 0;
+    transform: scale(0.5); /* Default size */
+    transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
 }
 .hero-section .tagline{
     font-weight: 400;
