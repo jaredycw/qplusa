@@ -1,11 +1,8 @@
 :root{
     --font-color:#1D1D1F;
-    --pargraph:1rem;
-    --extra-small-size: 0.8rem;
-    --large-size:1.6rem;
-}
-body{
-    display: block;
+    --paragraph-font:1rem;
+    --extra-small-size-font: 0.8rem;
+    --large-size-font:2rem;
 }
 .parallax-bg{
     position: absolute;
@@ -99,7 +96,14 @@ body{
     height: 100%;
 }
 .container{
-    font-size: var(--pargraph);
+    font-size: var(--paragraph-font);
+}
+.hero-section{
+    margin-top:9rem;
+}
+.hero-section .tagline{
+    font-weight: 400;
+    font-size: 1.3rem;
 }
 .hero-section .row{
     justify-content: center;
@@ -107,14 +111,17 @@ body{
 .hero-section .hero-btn{
     border:0;
     border-radius: 58px;
-    min-width: 280px;
+    color: var(--font-color);
+    font-weight: 600;
+    min-width: 250px;
     padding:0.8rem 0;
+    text-decoration: none;
 }
-.hero-section .watch-btn{
+.hero-section .involved-btn{
     background-color: #F2DE6D;
     transition: all 0.3s ease-in-out;
 }
-.hero-section .watch-btn:hover{
+.hero-section .involved-btn:hover{
     background-color: #FFE551;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -126,9 +133,21 @@ body{
     background-color: #F5734D;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.hero-section iframe{
+.hero-section .videoWrapper {
+    position: relative;
+    padding-bottom: calc(var(--aspect-ratio, .5625) * 100%); 
+    height: 0;
+}
+
+.hero-section .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 26px;
 }
+
 .nav-container{
     position: relative;
     margin: 0 auto;
@@ -144,7 +163,7 @@ body{
     font-weight: 700;
     position: absolute;
     transition: all 0.3s ease-in-out;
-    font-size: var(--large-size);
+    font-size: var(--large-size-font);
     z-index: 3;
 }
 .svg-line{
@@ -262,5 +281,5 @@ footer h1{
     color: #91B1DA;
 }
 .footer-cpright {
-    font-size: var(--extra-small-size);
+    font-size: var(--extra-small-size-font);
 }
