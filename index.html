@@ -30,33 +30,59 @@
         
     </div>
     <div class="main-content">
-        <div class="container">
-           
-            <div class="d-flex justify-content-center align-items-center hero-section">
-                <div class="text-center">
-                    <h1>Q Plus A Art Foundation Hi-Res Logo</h1>
-                    <p class="tagline mb-4">Where Accessibility Meets Art, A Pathway To Inclusion</p>
-                    <div class="row mb-3">
-                        <div class="col-xl-5">
-                            <a href="https://timeauction.org/en/organization/q-plus-a-art-foundation-limited/1014" target="_blank">
-                                <button type="button" class="mb-3 hero-btn involved-btn">Get Involve</button>
-                            </a>
+        <div class="hero-section">
+        <div class="container">   
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <h1>Q Plus A Art Foundation Hi-Res Logo</h1>
+                        <p class="tagline mb-4">Where Accessibility Meets Art, A Pathway To Inclusion</p>
+                        <div class="row mb-3">
+                            <div class="col-xl-5">
+                                <a href="https://timeauction.org/en/organization/q-plus-a-art-foundation-limited/1014" target="_blank">
+                                    <button type="button" class="mb-3 hero-btn involved-btn">Get Involve</button>
+                                </a>
+                            </div>
+                            <div class="col-xl-4">
+                                <a href="/crm/" target="_blank">
+                                    <button type="button" class="mb-3 hero-btn donate-btn">Donation</button>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-xl-4">
-                            <a href="/crm/" target="_blank">
-                                <button type="button" class="mb-3 hero-btn donate-btn">Donation</button>
-                            </a>
-                        </div>
+                    </div>
+                </div>  
+        </div>
+                <div class="hero-component">
+                    <div id="hero-gallery" class="hero-gallery gallery-1">
+                        <img src="./images/example01.jpg" alt="example01">
+                    </div>
+                    <div id="hero-gallery" class="hero-gallery gallery-2">
+                        <img src="./images/example02.jpg" alt="example02">
+                    </div>
+                    <div id="hero-gallery" class="hero-gallery gallery-3">
+                        <img src="./images/example03.jpg" alt="example03">
+                    </div>
+                    <div id="hero-gallery" class="hero-gallery gallery-4">
+                        <img src="./images/example04.jpg" alt="example04">
+                    </div>
+                    <div id="hero-gallery" class="hero-gallery gallery-5">
+                        <img src="./images/example05.jpg" alt="example05">
+                    </div>
+                    <div id="hero-gallery" class="hero-gallery gallery-6">
+                        <img src="./images/example06.jpg" alt="example06">
                     </div>
 
-                    <div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
-                        <iframe width="1000" height="500" src="https://www.youtube-nocookie.com/embed/gHFgfcWQvjo?si=R49WmlXbNmLCajIR&amp;controls=0" title="YouTube video player" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>
-                    </div>
                     
-                </div>        
-            </div>
-        </div>
+                    <div class="videoWrapper-container">
+                        <div class="videoWrapper">
+                            <iframe width="600" height="400" src="https://www.youtube-nocookie.com/embed/gHFgfcWQvjo?autoplay=1&controls=0" title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+           
+ 
+        
  
                 <div id="nav-container" class="nav-container">
 
@@ -211,39 +237,34 @@
             </footer>
 
         </div>
-    </div>
 
     <script>
-        // Get the element by its ID
-        const navContainer = document.getElementById('nav-container');
-        const navItem1 = document.getElementById('ir-item-1');
-        const navItem2 = document.getElementById('ir-item-2');
-        const navItem3 = document.getElementById('ir-item-3');
-        const navItem4 = document.getElementById('ir-item-4');
-        // Add a click event listener
-        navItem1.addEventListener('click', function() {
-            // Add a class when the element is clicked
-            navItem1.classList.toggle('clicked');
-            navContainer.classList.toggle('clicked-container')
+       const navContainer = document.getElementById('nav-container');
+        const navItems = document.querySelectorAll('[id^="ir-item-"]');
+
+        navItems.forEach(navItem => {
+            navItem.addEventListener('click', function() {
+                navItem.classList.toggle('clicked');
+                navContainer.classList.toggle('clicked-container');
+            });
         });
 
-        navItem2.addEventListener('click', function() {
-            // Add a class when the element is clicked
-            navItem2.classList.toggle('clicked');
-            navContainer.classList.toggle('clicked-container')
-        });
+    const heroGalleries = document.querySelectorAll('.hero-gallery');
+    const triggerOffset = 50; // When the scroll reaches 50px
 
-        navItem3.addEventListener('click', function() {
-            // Add a class when the element is clicked
-            navItem3.classList.toggle('clicked');
-            navContainer.classList.toggle('clicked-container')
-        });
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
 
-        navItem4.addEventListener('click', function() {
-            // Add a class when the element is clicked
-            navItem4.classList.toggle('clicked');
-            navContainer.classList.toggle('clicked-container')
+        heroGalleries.forEach(heroGallery => {
+            if (scrollPosition > triggerOffset) {
+                // Scroll down, apply the transformation
+                heroGallery.classList.add("cloudfloat");
+            } else {
+                // Back to the default scroll position, reset the transformation
+                heroGallery.classList.remove("cloudfloat");
+            }
         });
+    });
 
 
     </script>
