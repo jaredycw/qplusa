@@ -52,7 +52,8 @@
             </div>
         </div>
  
-                <div class="nav-container">
+                <div id="nav-container" class="nav-container">
+
                     <div id="ir-item-1" class="text-center nav-ir nav-ir-1">
                         Vision and Mission
                     </div>
@@ -63,7 +64,7 @@
                         </svg>    
                     </div>
 
-                    <div class="text-center mt-n3 nav-ir nav-ir-2">
+                    <div id="ir-item-2" class="text-center mt-n3 nav-ir nav-ir-2">
                         News and Updates
                     </div>
 
@@ -73,7 +74,7 @@
                         </svg>        
                     </div>
  
-                    <div class="text-center mt-n4 nav-ir nav-ir-3">
+                    <div id="ir-item-3" class="text-center mt-n4 nav-ir nav-ir-3">
                         Release and Publication
                     </div>
 
@@ -83,7 +84,7 @@
                         </svg>           
                     </div>
 
-                    <div class="text-center mt-n4 nav-ir nav-ir-4">
+                    <div id="ir-item-4" class="text-center mt-n4 nav-ir nav-ir-4">
                         Contact Us
                     </div>
                 </div>
@@ -203,13 +204,37 @@
 
     <script>
         // Get the element by its ID
+        const navContainer = document.getElementById('nav-container');
         const navItem1 = document.getElementById('ir-item-1');
-        
+        const navItem2 = document.getElementById('ir-item-2');
+        const navItem3 = document.getElementById('ir-item-3');
+        const navItem4 = document.getElementById('ir-item-4');
         // Add a click event listener
         navItem1.addEventListener('click', function() {
             // Add a class when the element is clicked
             navItem1.classList.toggle('clicked');
+            navContainer.classList.toggle('clicked-container')
         });
+
+        navItem2.addEventListener('click', function() {
+            // Add a class when the element is clicked
+            navItem2.classList.toggle('clicked');
+            navContainer.classList.toggle('clicked-container')
+        });
+
+        navItem3.addEventListener('click', function() {
+            // Add a class when the element is clicked
+            navItem3.classList.toggle('clicked');
+            navContainer.classList.toggle('clicked-container')
+        });
+
+        navItem4.addEventListener('click', function() {
+            // Add a class when the element is clicked
+            navItem4.classList.toggle('clicked');
+            navContainer.classList.toggle('clicked-container')
+        });
+
+
     </script>
 
     <script>
