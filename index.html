@@ -281,6 +281,58 @@
     </script>
 
     <script>
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const navA = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".nav-ir-1",
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: true
+        }
+    });
+    navA.from(".nav-ir-1", { x: 100});
+    navA.to(".nav-ir-1", { x: 0});
+
+    const navB = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".nav-ir-1",
+            start: "top 90%",
+            end: "bottom 10%",
+            scrub: true,
+        }
+    });
+    navA.from(".nav-ir-2", { x: 100, y:10});
+    navA.to(".nav-ir-2", { x: 0, y:0});
+
+    const navC = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".nav-ir-2",
+            start: "top 80%",
+            end: "bottom 10%",
+            scrub: true,
+        }
+    });
+    navC.from(".nav-ir-3", { x: 100, y:30});
+    navC.to(".nav-ir-3", { x: 0, y:0});
+
+    const navD = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".nav-ir-2",
+            start: "top 90%",
+            end: "bottom 10%",
+            scrub: true,
+        }
+    });
+    navC.from(".nav-ir-4", {y:100});
+    navC.to(".nav-ir-4", {y:0});
+
+
+
+    
+    </script>
+
+    <script>
         var scene1 = document.getElementById('scene1');
         var parallaxInstance = new Parallax(scene1, {
         relativeInput: true

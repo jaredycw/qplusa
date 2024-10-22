@@ -224,6 +224,7 @@
     font-weight: 700;
     position: absolute;
     transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
     font-size: var(--large-size-font);
     z-index: 3;
 }
@@ -252,8 +253,8 @@
     cursor: auto;
     transform: none !important;
 }
-.nav-ir-1:hover{
-    transform: translate(2ch, 2mm);
+.nav-ir-1:hover:not(.clicked) {
+    transform: translate(2ch, 2mm) !important;
 }
 .line-1{
     top: 13%;
@@ -278,8 +279,8 @@
     right: 0;
     top:18%;
 }
-.nav-ir-2:hover{
-    transform: translate(-2ch, -2mm);
+.nav-ir-2:hover:not(.clicked){
+    transform: translate(-2ch, -2mm) !important;;
 }
 .nav-ir-3{
     background-color: #D7BBA7;
@@ -292,8 +293,8 @@
     left: 0;
     bottom: 10%;
 }
-.nav-ir-3:hover{
-    transform: translate(2ch, -2mm);
+.nav-ir-3:hover:not(.clicked){
+    transform: translate(2ch, -2mm) !important;;
 }
 .nav-ir-4{
     background-color: #F2DE6D;
@@ -306,8 +307,8 @@
     right: 0;
     bottom: 0;
 }
-.nav-ir-4:hover{
-    transform: translate(-2ch, 2mm);
+.nav-ir-4:hover:not(.clicked){
+    transform: translate(-2ch, 2mm) !important;;
 }
 
  
