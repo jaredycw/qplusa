@@ -17,14 +17,14 @@
 
             <li class="layer" data-depth="0.20"><i class="qplusa-square abs area1"></i></li>
             <li class="layer" data-depth="0.30"><i class="qplusa-circle abs area2"></i></li>
-            <li class="layer" data-depth="0.40"><i class="qplusa-triangle abs area3">&#9650;</i></li>
+            <li class="layer" data-depth="0.40"><i class="qplusa-triangle abs area3"></i></li>
             <li class="layer" data-depth="0.50"><i class="qplusa-square abs area4"></i></li>
             <li class="layer" data-depth="0.20"><i class="qplusa-circle abs area5"></i></li>
-            <li class="layer" data-depth="0.30"><i class="qplusa-triangle abs area6">&#9650;</i></li>
+            <li class="layer" data-depth="0.30"><i class="qplusa-triangle abs area6"></i></li>
             <li class="layer" data-depth="0.40"><i class="qplusa-circle abs area7"></i></li>
             <li class="layer" data-depth="0.50"><i class="qplusa-square abs area8"></i></li>
-            <li class="layer" data-depth="0.30"><i class="qplusa-triangle abs area9">&#9650;</i></li>
-            <li class="layer" data-depth="0.20"><i class="qplusa-triangle abs area10">&#9650;</i></li>
+            <li class="layer" data-depth="0.30"><i class="qplusa-triangle abs area9"></i></li>
+            <li class="layer" data-depth="0.20"><i class="qplusa-triangle abs area10"></i></li>
             <li class="layer" data-depth="0.40"><i class="qplusa-circle abs area11"></i></li>
             <li class="layer" data-depth="0.20"><i class="qplusa-square abs area12"></i></li>
  
@@ -77,7 +77,8 @@
                     
                     <div class="videoWrapper-container">
                         <div class="videoWrapper">
-                            <iframe id="player" width="1920" height="1080" src="https://www.youtube.com/embed/gHFgfcWQvjo?enablejsapi=1"></iframe>
+                            <div class="play-btn"><div class="play-triangle"></div></div>
+                            <iframe id="player" width="1920" height="1080" src="https://www.youtube.com/embed/gHFgfcWQvjo?enablejsapi=1&controls=0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -90,6 +91,27 @@
 
                     <div id="ir-item-1" class="nav-ir nav-ir-1">
                         <h1>About</h1>
+                        <div class="about-content">
+                            <div class="about-row">
+                                <h2>We Empower Neurodivergent Voices Through Accessibility and Art</h2>
+                            </div>
+                            <div class="about-row">
+                                <ul class="my-4">
+                                    <li><h2><strong>Our Vision</strong></h2></li>
+                                        <ul class="mt-3">
+                                            <li>
+                                                <h3>Enhancing community engagement, inclusivity, and sustainability through the arts. Nurturing the young generation, like Georgia O'Keeffe.</h3>
+                                            </li>
+                                        </ul>
+                                    <li class="mt-5"><h2><strong>Our Mission</strong></h2></li>
+                                    <ul class="mt-2">
+                                        <li>
+                                            <h3>Advocating ASD-friendly initiatives in public spaces in Hong Kong and connect ASD community with the public through arts.</h3>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="svg-line line-1">
@@ -195,15 +217,15 @@
                         <div class="row footer-navigation">
 
                             <div class="col-3">
-                                <a href="/">IG</a>
+                                <a href="https://www.instagram.com/qplusa_art_foundation/" target="_blank">IG</a>
                             </div>
 
                             <div class="col-3">
-                                <a href="/">FB</a>
+                                <a href="https://www.facebook.com/profile.php?id=61563040713781&mibextid=ZbWKwL" target="_blank">FB</a>
                             </div>
 
                             <div class="col-3">
-                                <a href="/">Ln</a>
+                                <a href="https://linkedin.com/company/qplusa-art-foundation" target="_blank">in</a>
                             </div>
 
                         </div>
@@ -391,7 +413,7 @@
     setTimeout(() => {
         function onPlayerStateChange(event) {
             if (event.data == YT.PlayerState.PLAYING) {
-                event.target.setPlaybackQuality('highres');  // <-- WORKS!
+                event.target.setPlaybackQuality('highres'); 
             }
         }
     }, 100 );
