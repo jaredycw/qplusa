@@ -382,16 +382,19 @@
           }
       });
     }
-    function onPlayerReady(event) {
-      player.setVolume(0);
-      event.target.playVideo();
-    }
-  
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING) {
-            event.target.setPlaybackQuality('highres');  // <-- WORKS!
+    setTimeout(() => {
+        function onPlayerReady(event) {
+        player.setVolume(0);
+        event.target.playVideo();
         }
-    }
+    },100);
+    setTimeout(() => {
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                event.target.setPlaybackQuality('highres');  // <-- WORKS!
+            }
+        }
+    }, 100 );
   </script>
     
         
