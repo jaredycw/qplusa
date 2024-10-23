@@ -134,6 +134,9 @@
     font-weight: bold;
     min-width: 250px;
     padding: 1rem 0;
+}
+.hero-section a{
+    color: var(--font-color);
     text-decoration: none;
 }
 .hero-section .involved-btn{
@@ -214,6 +217,7 @@
 }
 .hero-section .videoWrapper iframe {
     position: absolute;
+    border: 0;
     top: 0;
     left: 0;
     width: 100%;
