@@ -11,7 +11,7 @@
 :root{
     --black-color:#1D1D1F;
     --paragraph-font:1rem;
-    --extra-small-size-font: 0.8rem;
+    --extra-small-size-font: 0.8rem; 
     --large-size-font:2rem;
 }
 *{
@@ -292,7 +292,7 @@ a:hover{
     position: relative;
     margin: 0 auto;
     margin-top:7rem;
-    max-width: 1440px;
+    max-width: 1400px;
     height: 900px;
 }
 .clicked-container{
@@ -314,7 +314,6 @@ a:hover{
     color: var(--black-color);
 }
 .nav-ir h1{
-    text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2.6rem;
@@ -329,15 +328,13 @@ a:hover{
     top:0;
 }
 .clicked{
-    -webkit-clip-path: none !important;
-    clip-path: none !important;
     max-width: 100% !important;
     height: 100% !important;
     position: fixed;
     margin:0;
     top:0 !important;
     left:0;
-    overflow: hidden;
+    overflow:auto;
     z-index: 5;
     cursor: auto;
     transform: none !important;
@@ -361,12 +358,9 @@ a:hover{
     top: 61%;
     left: 20%;
  }
-.nav-ir-1.clicked{
-    padding: 5rem 7rem;
- }
 .nav-ir-2{
     right: 0;
-    top:20%;
+    top:23%;
 }
 .nav-ir-2:hover:not(.clicked){
     transform: translate(-2ch, -2mm) !important;;
@@ -376,7 +370,7 @@ a:hover{
     bottom:13%;
 }
 .nav-ir-3:hover:not(.clicked){
-    transform: translate(2ch, -2mm) !important;;
+    transform: translate(2ch, -2mm) !important;
 }
 .nav-ir-4{
     max-width: 709px;
@@ -388,21 +382,55 @@ a:hover{
     transform: translate(-2ch, 2mm) !important;
     transform:scale(0.8);
 }
-.nav-ir-4.clicked .nav-inner{
-    background-color: #F2DE6D;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+
+
+.nav-outer{
+    position: relative;
 }
-.nav-ir-4.clicked .nav-outer{
+.clicked .nav-outer{
     display: none;
 }
+
+.clicked .nav-inner{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: solid 1rem var(--black-color);
+}
+.nav-ir-1.clicked .nav-inner{
+    background-color: #91B1DA;
+}
+.nav-ir-2.clicked .nav-inner{
+    background-color: #DB7658;
+}
+.nav-ir-3.clicked .nav-inner{
+    background-color: #D7BBA7;
+}
+.nav-ir-4.clicked .nav-inner{
+    background-color: #F2DE6D;
+}
+.nav-ir:last-child .inner-content{
+    padding: 0;
+}
+.inner-content{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+ }
+ .clicked .inner-content{
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    visibility: visible;
+ }
+
 .contact-row{
     width: 0;
     height: 0;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 1.6s ease-in-out, width 0.5s cubic-bezier(.01,.78,1,.12);
+    transition: opacity 1.6s ease-in-out, width 0.5s ease-in-out;
 }
 
 .clicked .contact-row{
@@ -414,8 +442,6 @@ a:hover{
     flex-wrap: wrap;
     justify-content: space-around;
     opacity: 1;
-    z-index: 5;
-    top:0
 }
 .contact-col{
     width: 50%;
@@ -425,23 +451,24 @@ a:hover{
     background-position: center;
     background-size: cover;
 }
-.contact-col{
-    border: solid var(--black-color) 1.2rem;
+.contact-col.team-image img{
+    display: none;
 }
+ .contact-col:first-child{
+    border-right:solid 1rem var(--black-color);
+ }
 .contact-col:last-child{
-   padding:0 5rem;
-   border-left:0;
+   padding:0 3rem;
 }
 .contact-col h1{
+    line-height: 1;
     font-size: 4rem;
-    margin: 3rem 0;
 }
 .contact-col strong{
     font-size:1.6rem;
 }
 .contact-col .send-btn{
     background-color: var(--black-color);
-
     color: #ffffff;
     width: 100%;
     margin-top: 5rem;
@@ -458,8 +485,33 @@ a:hover{
     background-color: #ffffff;
     color: var(--black-color);
 }
-
-
+.close-btn{
+    cursor: pointer;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    transition: transform  0.5s ease-in-out;
+    transform-origin: center center;
+}
+ 
+.close-btn:hover{
+    transform-origin: center center;
+    transform: rotate(360deg);
+}
+.close-btn:before, .close-btn:after {
+    position: absolute;
+    content: ' ';
+    left: 26px;
+    height: 60px;
+    width: 8px;
+    background-color: #333;
+}
+.close-btn:before {
+    transform: rotate(45deg);
+}
+.close-btn:after {
+    transform: rotate(-45deg);
+}
 
 .nav-ir .nav-ir-name{
     width: 100%;
@@ -469,7 +521,7 @@ a:hover{
     text-align: center;
 }
 .nav-ir-1 .nav-ir-name{
-    top:40% !important;
+    top: 40% !important;
 }
 
 .about-content{
@@ -478,7 +530,6 @@ a:hover{
     transform: translateX(-100%);
     opacity: 0;
     transition: opacity 1.2s ease-in-out, transform 0.8s ease-in-out;
-
 }
 .clicked .about-content{
     visibility:visible;
@@ -487,7 +538,6 @@ a:hover{
 
 }
 .clicked .about-row{
-
     border: 6px solid var(--black-color);
     border-left: 0;
     border-right: 0;
@@ -541,4 +591,46 @@ footer h1{
 .svg-container{
     z-index: 0;
     position: absolute;
+    left: -100%;
 }
+.bodyOverflow{
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1100px) {
+    .svg-line{
+        display: none;
+    }
+    .clicked{
+        overflow: auto;
+    }
+    .nav-ir.clicked .nav-inner{
+        height: auto;
+        padding: 2rem;
+        border: solid 1rem var(--black-color);
+    }
+    .contact-col.team-image{
+        padding:0 3rem;
+    }
+    .contact-col.team-image img{
+        width: 100%;
+    }
+
+    .clicked .contact-col{
+        width: 100%;
+        border: 0;
+        padding: 0;
+    }
+    .contact-col h1{
+        line-height: 1;
+        font-size: 3rem;
+    }
+ 
+    .contact-col.team-image{
+        background-image:none;
+    }
+    .contact-col.team-image img{
+        display: block;
+    }
+   
+  }
