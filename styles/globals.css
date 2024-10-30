@@ -2,11 +2,13 @@
     font-family: MoMa;
     src: url(../assets/fonts/MoMA_Sans_Regular.ttf);
     font-weight: normal;
+    font-display: swap; /* Ensures text remains visible during webfont load */
 }
 @font-face {
     font-family: MoMa;
     src: url(../assets/fonts/MoMA_Sans_Bold.ttf);
     font-weight: bold;
+    font-display: swap; /* Ensures text remains visible during webfont load */
 }
 
 :root{
