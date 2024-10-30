@@ -195,7 +195,7 @@ a:hover{
     margin-top:4rem;
 }
 .hero-section-scaled{
-    opacity: 0;
+    opacity: 0.0001;
     transform: scale(0.5); /* Default size */
     transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
 }
@@ -458,7 +458,7 @@ a:hover{
     display: none;
 }
 .nav-inner{
-    opacity: 0;
+    opacity: 0.0001;
     transform:translateX(0);
     transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
 }
@@ -644,7 +644,7 @@ input:is(:-webkit-autofill, :autofill){
     width: 0;
     height: 0;
     visibility: hidden;
-    opacity: 0;
+    opacity: 0.0001;
     transition: opacity 2s ease-in-out;
 }
 
