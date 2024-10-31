@@ -53,7 +53,6 @@
     const scalingElement = document.querySelector('.hero-section-scaled');
 
     // Triggering the scale effect after a small delay to allow the transition to take effect
-
     setTimeout(() => {
         scalingElement.style.transform = "scale(1)";
         scalingElement.style.opacity = "1";
